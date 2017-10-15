@@ -5,68 +5,32 @@
         xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
         xmlns:local="clr-namespace:WPFApp"
         mc:Ignorable="d"
-        Title="MainWindow" Height="350" Width="525">
-    <Grid Margin="0,0,2,-20">
-        <Grid.RowDefinitions>
-            <RowDefinition MinHeight="50" MaxHeight="100"> </RowDefinition>
-            <RowDefinition> </RowDefinition>
-        </Grid.RowDefinitions>
+        Title="MainWindow" MinHeight="350" MinWidth="425" MaxHeight="350" MaxWidth="425" Width="609">
+    <Grid Margin="0,0,2,-88" RenderTransformOrigin="0.502,0.399">
         <Grid.ColumnDefinitions>
-            <ColumnDefinition></ColumnDefinition>
-            <ColumnDefinition></ColumnDefinition>
-            
+            <ColumnDefinition/>
+            <ColumnDefinition Width="0*"/>
         </Grid.ColumnDefinitions>
+        <Grid.RowDefinitions>
+            <RowDefinition></RowDefinition>
+            <RowDefinition></RowDefinition>
+        </Grid.RowDefinitions>
+
 
         <StackPanel Orientation="Vertical">
-            <StackPanel Orientation="Horizontal" Margin="5">
-            <Label>Podaj Imie</Label>
-        <TextBox x:Name ="TextBox"  Margin="2" VerticalAlignment="Top" Grid.Column="0" Grid.Row="0" Width="100"  TextChanged="TextBox_TextChanged"></TextBox>
-       </StackPanel>
-            <StackPanel Orientation="Horizontal" Margin="5">
-            <Label>Podaj Nazwisko</Label>
-        <TextBox x:Name ="TextBox1"  Margin="2" VerticalAlignment="Top" Grid.Column="0" Grid.Row="0" Width="100"  TextChanged="TextBox_TextChanged"></TextBox>
-       </StackPanel>
-                
-       <Button Content="Wyslij" Width="200" Height="20" Click="Button_Click"></Button>
+            <Button x:Name="Btn" Content="Top Trumps Authors == &gt; GEORGE ORWELL" Height="20" Background="Pink" Click="Button_Click" Margin="10,10"/>
+
+        </StackPanel>
+        <Grid Margin="10,51,2,10">
+
             
-       </StackPanel>
-        <WrapPanel Grid.Row="1">
-            <Rectangle Margin="10" Width="50" Height="50" Fill="Aqua"></Rectangle>
-            <Rectangle Margin="10" Width="50" Height="50" Fill="Aqua"></Rectangle>
-            <Rectangle Margin="10" Width="50" Height="50" Fill="Aqua"></Rectangle>
-            <Rectangle Margin="10" Width="50" Height="50" Fill="Aqua"></Rectangle>
-            <Rectangle Margin="10" Width="50" Height="50" Fill="Aqua"></Rectangle>
-            <Rectangle Margin="10" Width="50" Height="50" Fill="Aqua"></Rectangle>
-            
-            
-        </WrapPanel>
-        <UniformGrid Grid.Row="1" Grid.Column="1">
-             <Rectangle Margin="10" Width="50" Height="50" Fill="Aqua"></Rectangle>
-            <Rectangle Margin="10" Width="50" Height="50" Fill="Aqua"></Rectangle>
-            <Rectangle Margin="10" Width="50" Height="50" Fill="Aqua"></Rectangle>
-            <Rectangle Margin="10" Width="50" Height="50" Fill="Aqua"></Rectangle>
-            <Rectangle Margin="10" Width="50" Height="50" Fill="Aqua"></Rectangle>
-            <Rectangle Margin="10" Width="50" Height="50" Fill="Aqua"></Rectangle>
-            
-        </UniformGrid>
-        <GridSplitter Grid.Row="1" Height="3" Grid.ColumnSpan="2" HorizontalAlignment="Stretch" VerticalAlignment="Top" Background="Green"></GridSplitter>
-         <GridSplitter Grid.Column="1" Width="3" Grid.RowSpan="2" HorizontalAlignment="Left" VerticalAlignment="Stretch" Background="Green"></GridSplitter>
-        <Grid Grid.Column="1" Margin="0">
-            <Button Grid.Column="0" Grid.Row="0" VerticalAlignment="Center"  Content="Button1"></Button>
-            <Button Grid.Column="0" Grid.Row="1" VerticalAlignment="Center"  Content="Button2"></Button>
-            <Button Grid.Column="1" Grid.Row="0" VerticalAlignment="Center"  Content="Button3"></Button>
-            <Button Grid.Column="1" Grid.Row="1"  Margin="5,5,5,10" VerticalAlignment="Center"  Content="Button4"></Button>
-             <Grid.RowDefinitions>
-                 
-            <RowDefinition Height="*"> </RowDefinition>
-            <RowDefinition Height="*"> </RowDefinition>
-                 
-        </Grid.RowDefinitions>
-        <Grid.ColumnDefinitions>
-            <ColumnDefinition></ColumnDefinition>
-            <ColumnDefinition></ColumnDefinition>
-            
-        </Grid.ColumnDefinitions>
+
+            <Border BorderBrush="Black" BorderThickness="1" Margin="0,10,10,-61" RenderTransformOrigin="0.202,0.633">
+                <TextBlock x:Name="textBlock" HorizontalAlignment="Left" Height="158" Margin="216,43,0,0" TextWrapping="Wrap" VerticalAlignment="Top" Width="147"><Run Text="Writing Style"/><Run Text=" - 7"/><LineBreak/><Run/><LineBreak/><Run Text="Charactersiation - 9"/><LineBreak/><Run/><LineBreak/><Run Text="Influance - 10"/><LineBreak/><Run/><LineBreak/><Run Text="Readability - 8"/><LineBreak/><Run/><LineBreak/><Run/></TextBlock>
+            </Border>
+
+            <Image Source="C:\Users\RENT\Downloads\Orwell.jpg" Margin="0,36,203,-37"/>
         </Grid>
+        <TextBlock x:Name="textBlock1" HorizontalAlignment="Left" Height="89" Margin="10,254,0,0" TextWrapping="Wrap" Text="Working as an imperial policeman gave him considerable responsibility while most of his contemporaries were still at university in England. When he was posted farther east in the " VerticalAlignment="Top" Width="395" Grid.RowSpan="2"/>
     </Grid>
 </Window>

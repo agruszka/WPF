@@ -31,14 +31,19 @@ namespace WPFApp
 
         private void Button_Click(object sender, RoutedEventArgs e)
         {
-            var text = TextBox.Text;
-            var text1 = TextBox1.Text;
-            MessageBox.Show(text + " " + text1);
+            var text = textBlock1.Text;
+            MessageBox.Show(text);
+
         }
 
         private void TextBox_TextChanged(object sender, TextChangedEventArgs e)
         {
             
+        }
+
+        private void textBox_TextChanged_1(object sender, TextChangedEventArgs e)
+        {
+
         }
     }
 }
