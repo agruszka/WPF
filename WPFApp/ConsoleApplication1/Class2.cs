@@ -14,6 +14,7 @@ namespace Sim1
         {
             this.symulacja = symulacja;
             symulacja.list_osob += Print;
+
         }
 
         public void Print(string message)
