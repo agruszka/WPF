@@ -5,7 +5,7 @@ using System.Text;
 using System.Threading;
 using System.Threading.Tasks;
 
-namespace Sim1
+namespace TemperaturaServera
 {
     public class Symulacja
     {
@@ -17,7 +17,7 @@ namespace Sim1
         {
 
 
-        add
+            add
             {
                 if (CounterUser <= 100)
                 {
@@ -27,7 +27,7 @@ namespace Sim1
             }
 
 
-        remove
+            remove
             {
                 if (CounterUser <= 100)
                 {
@@ -36,23 +36,31 @@ namespace Sim1
                 CounterUser++;
             }
 
-            
+
         }
         public int CurrentTime;
+        private int Temperature;
 
         public Symulacja()
         {
-            CurrentTime = 0;
+            CurrentTime = 70;
         }
 
         public void OdpalSymulacje()
         {
-            while (CurrentTime <10)
+            Random rnd = new Random();
+
+
+            while (Temperature < 80)
+                
             {
-                if (CurrentTime % 2 ==0)
+                Temperature = rnd.Next(75, 85);
+
+                Console.WriteLine(Temperature);
+                if (Temperature > 80)
                 {
-                    //_listOsob(CurrentTime.ToString());
-                    RaiseEventonCurrentTime(CurrentTime.ToString());
+               
+                    RaiseEventonCurrentTime(Temperature.ToString());
                 }
                 Thread.Sleep(1500);
                 Console.WriteLine(CurrentTime);
